@@ -1,9 +1,0 @@
-.star-rating {
-    display: flex;
-    font-size: 13px; /* Ajusta el tamaño de las estrellas según sea necesario */
-    color: gray; /* Color de las estrellas vacías */
-  }
-  
-  .star-rating .filled {
-    color: goldenrod; /* Color de las estrellas llenas */
-  }
