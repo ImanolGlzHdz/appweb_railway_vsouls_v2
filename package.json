@@ -11,6 +11,15 @@
     "start": "serve dist -s -n -L -p $PORT"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@mercadopago/sdk-react": "^0.0.15",
+    "@nextui-org/react": "^2.2.9",
+    "@react-pdf-viewer/core": "^3.12.0",
+    "@react-pdf-viewer/default-layout": "^3.12.0",
+    "@testing-library/jest-dom": "^6.2.0",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/user-event": "^14.5.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "serve": "^14.2.1"
