@@ -1,10 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const [roles, setRoles] = useState([]);
+
+  useEffect(() => {
+    // Realizar la solicitud GET a la API de roles
+    fetch(`${import.meta.env.VITE_API}/rol`)
+      .then((response) => response.json())
+      .then((data) => {
+        // Actualizar el estado con los roles obtenidos de la API
+        setRoles(data[0]);
+      })
+      .catch((error) => {
+        console.error('Error al obtener roles:', error);
+      });
+  }, []); // El segundo argumento [] indica que este efecto se ejecutará solo una vez al montar el componente
 
   return (
     <>
@@ -25,12 +36,20 @@ function App() {
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
+        <h2>Roles:</h2>
+        <ul>
+          {roles.map((rol) => (
+            <li key={rol.ID_ROL}>
+              <strong>{rol.NOMBRE}</strong>: {rol.DESCRIPCION}
+            </li>
+          ))}
+        </ul>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
