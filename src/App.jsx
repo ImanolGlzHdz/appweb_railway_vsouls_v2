@@ -19,7 +19,7 @@ function App() {
       } catch (error) {
         console.error('Error al obtener roles:', error);
       }
-      alert('hola');
+      // alert('hola');
     };
 
     fetchData();
@@ -27,7 +27,13 @@ function App() {
 
   return (
     <>
-      <h1>hola</h1>
+      <ul>
+          {roles.map((rol) => (
+            <li key={rol.ID_ROL}>
+              <strong>{rol.NOMBRE}</strong>: {rol.DESCRIPCION}
+            </li>
+          ))}
+        </ul>
     </>
   );
 }
