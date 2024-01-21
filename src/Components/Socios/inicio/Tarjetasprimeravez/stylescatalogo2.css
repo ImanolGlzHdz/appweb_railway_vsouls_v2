@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.contCP {
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card2 {
+    width: 150px !important;
+    margin: 10px; /* Ajusta el margen según tus necesidades */
+    /* Otras propiedades de estilo para la tarjeta */
+  }
+  
+  .container-products-paquete {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .wrapperCatalogo2 {
+    position: relative;
+    display: grid;
+    margin-top: 5px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 5%;
+}
+.wrapperCatalogo2 .card2 {
+    position: relative;
+    width: 250px;
+    height: 190px;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    margin-top: 5%;
+    /*background:#F8F9F9;*/
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.wrapperCatalogo2 .card2::after {
+    content: 'VS';
+    position: absolute;
+    top: -35%;
+    left: -18%;
+    font-size: 12em;
+    font-style: oblique;
+    font-weight: bold;
+    color: #f8daf2;
+}
+
+.wrapperCatalogo2 .card2 .img-box {
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 99;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+/* .wrapperCatalogo2 .card2:hover .img-box {
+    top: -13%;
+    transform: translateY(-13%);
+    width: 80%;
+    height: 88%;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+} */
+
+.wrapperCatalogo2 .card2 .img-box img{
+    position: absolute;
+    width: 98%;    
+}
+.wrapperCatalogo2 .card2 .details {
+    position: absolute;
+    bottom: -8%;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    transition: 0.8s;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+}
+/* .wrapperCatalogo2 .card2:hover .details {
+    height: 210px;
+}
+.card2:hover .details h2{
+    font-size: 17px;
+} */
+.details h2 {
+    font-size: 17px;
+    position: relative;
+    letter-spacing: .7px;
+    color:black;
+    opacity: 0.85;
+    margin-top: 20px; 
+}
+.details .calf span{
+    color: goldenrod;
+    font-size: 12.5px;
+}
+.details .oferta h3{
+    text-decoration: line-through;
+    color: gray;
+    font-size: 13px;
+    font-weight: 200;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.details .oferta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    margin-top: 2px;
+    visibility: hidden;
+}
+.card2:hover .details .oferta {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.3s;
+}
+
+.details .price h3 {
+    color: #c22f85;
+    font-size: 15px;
+    font-weight: 500px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    
+}
+.details .price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    margin-top: 5px;
+    visibility: hidden;
+}
+.card2:hover .details .price {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.3s;
+}
+.details .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+}
+.details .link a{
+    text-decoration: none;
+    background: #363753;
+    font-weight: 500;
+    font-size: 10px;
+    color: #F8F9F9;
+    padding: 5px 15px;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+}
+.card2:hover .details .link a {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.7s;
+}
+.details .fav {
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+    margin-top: 2%;
+}
+.card2:hover .details .fav {
+    opacity: 1;
+    font-size: 20px;
+    transform: translateY(0px);
+    transition-delay: 0.7s;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) and (max-width:1023px){
+    .contCP {
+        width: 98%;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+  
+
+    .wrapperCatalogo2 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .wrapperCatalogo2 .card2 {
+        position: relative;
+        width: 82%;
+        height: 150px;
+        margin-left: 9%;
+        margin-right: 9;
+        /*background:#F8F9F9;*/
+    }
+    .wrapperCatalogo2 .card2:hover .img-box {
+        top: -10%;
+        transform: translateY(-10%);
+        width: 75%;
+        height: 75%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    .contCP {
+        width: 98%;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+ 
+    .wrapperCatalogo2 {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+    .wrapperCatalogo2 .card2 {
+        width: 90%;
+        height: 150px;
+        margin-left: 5%;
+        margin-right: 5%;
+        height: 250px;
+    }
+    .wrapperCatalogo2 .card2::after {
+        font-size: 7em;
+        left: -5%;
+        top: -4%;
+    }
+    .wrapperCatalogo2 .card2 .img-box {
+        top: -11%;
+        transform: none;
+        width: 90%;
+        height: 69%;
+        transition: none;
+    }
+    .wrapperCatalogo2 .card2:hover .img-box {
+        top: -11%;
+        transform: none;
+        width: 100%;
+        height: 80%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .wrapperCatalogo2 .card2 .img-box img{
+        width: 85%;    
+    }
+    .wrapperCatalogo2 .card2 .details {
+        height: 135px;
+        transition: none;
+    }
+    .wrapperCatalogo .card2:hover .details {
+        height: 135px;
+    }
+    .card2:hover .details h2{
+        font-size: 12px;
+    }
+    .details h2 {
+        font-size: 12px;
+    }
+    .details .calf span{
+        font-size: 9.5px;
+    }
+    .details .oferta h3{
+        font-size: 10px;
+    }
+    .details .oferta {
+        opacity: 1;
+        margin-top: 2px;
+        visibility: visible;
+    }
+    .card2:hover .details .oferta {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: none;
+    }
+    .details .price h3 {
+        font-size: 10.5px;
+    }
+    .details .price {
+        opacity: 1;
+        visibility: visible;
+        margin-top: 0px;
+    }
+    .card2:hover .details .price {
+        opacity: 1;
+        visibility: visible;
+        transition-delay:none;
+    }
+    .details .link {
+        margin-top: 0%;
+    }
+    .details .link a{
+        font-size: 0px;
+        padding: 0px 0px;
+        border-radius: 5px;
+        opacity: 0;
+        transform: none;
+        transition: none;
+        visibility: hidden;
+    }
+    .card2:hover .details .link a {
+        opacity: 0;
+        transform: none;
+        transition-delay: none;
+    }
+    .details .fav {
+        padding: 0px 15px;
+        opacity: 1;
+        transform: translateY(0px);
+        transition: none;
+        margin-top: 0%;
+    }
+    .card2:hover .details .fav {
+        opacity: 1;
+        font-size: 12px;
+        transform: none;
+        transition-delay: none;
+        cursor: pointer;
+    }
+
+}

@@ -1,0 +1,15 @@
+import React from 'react'
+import Menu from '../../menuadministrador/menudenavegacion/ofertas/ofertas'
+import Ofertasa from '../../crudofertas/ofertas'
+import '../menustilos.css'
+
+const paquetesinicio = () => {
+  return (
+    <div>
+      <Menu/>
+      <Ofertasa/>
+    </div>
+  )
+}
+
+export default paquetesinicio
