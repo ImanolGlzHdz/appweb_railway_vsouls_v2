@@ -15,6 +15,7 @@ function App() {
       .catch((error) => {
         console.error('Error al obtener roles:', error);
       });
+      alert('hola')
   }, []); // El segundo argumento [] indica que este efecto se ejecutará solo una vez al montar el componente
 
   return (
