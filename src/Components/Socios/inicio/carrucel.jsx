@@ -10,7 +10,7 @@ const Carousel = () => {
       .then((respuesta) => respuesta.json()) // Convierte la respuesta en formato JSON
       .then((data) => setPublicidad(data)) // Actualiza el estado Publicidad con los datos obtenidos
       .catch((err) => {
-        console.error(err);
+        // console.error(err);
       });
   }, []);
 

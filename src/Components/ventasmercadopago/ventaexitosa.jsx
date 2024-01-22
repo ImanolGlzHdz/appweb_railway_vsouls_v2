@@ -14,7 +14,7 @@ const Ventaexitosa = () => {
         const data = await response.json();
         console.log(data); // Puedes ajustar esto según tus necesidades
       } catch (error) {
-        console.error('Error al realizar la petición:', error);
+        // console.error('Error al realizar la petición:', error);
       }
     };
 

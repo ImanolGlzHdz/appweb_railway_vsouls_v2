@@ -17,7 +17,7 @@ const Tarjetas = () => {
       const productos = Array.isArray(data) ? data : [];
       setProductos(productos);
     } catch (error) {
-      console.error('Error al obtener productos:', error);
+      // console.error('Error al obtener productos:', error);
     }
   };
 
@@ -40,7 +40,7 @@ const Tarjetas = () => {
 
       setCarritoProductos(carritoData[0]);
     } catch (error) {
-      console.error('Error al agregar producto al carrito:', error);
+      // console.error('Error al agregar producto al carrito:', error);
     }
 
     setShowModal(true);  // Cambiado de handleShowModal a setShowModal

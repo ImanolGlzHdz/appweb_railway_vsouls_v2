@@ -25,11 +25,11 @@ const Nivelessocio = () => {
           if (data && data[0]) {
             setNivelesn(data[0]);
           } else {
-            console.error('No se encontraron datos de niveles del socio.');
+            // console.error('No se encontraron datos de niveles del socio.');
           }
         }
       } catch (error) {
-        console.error('Error al obtener niveles del socio:', error);
+        // console.error('Error al obtener niveles del socio:', error);
       }
     };
 

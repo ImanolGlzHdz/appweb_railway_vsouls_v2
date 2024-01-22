@@ -11,7 +11,7 @@ const Llistacarritocompras = () => {
       const [productos, _] = await response.json();
       setCarritoData(productos);
     } catch (error) {
-      console.error('Error fetching carrito data:', error);
+      // console.error('Error fetching carrito data:', error);
     }
   };
 
@@ -27,7 +27,7 @@ const Llistacarritocompras = () => {
       // Vuelve a cargar los datos después de la actualización
       fetchCarritoData();
     } catch (error) {
-      console.error('Error al sumar paquete:', error);
+      // console.error('Error al sumar paquete:', error);
     }
   };
 
@@ -39,7 +39,7 @@ const Llistacarritocompras = () => {
       // Vuelve a cargar los datos después de la actualización
       fetchCarritoData();
     } catch (error) {
-      console.error('Error al restar paquete:', error);
+      // console.error('Error al restar paquete:', error);
     }
   };
 
@@ -51,7 +51,7 @@ const Llistacarritocompras = () => {
       // Vuelve a cargar los datos después de la actualización
       fetchCarritoData();
     } catch (error) {
-      console.error('Error al eliminar paquete:', error);
+      // console.error('Error al eliminar paquete:', error);
     }
   };
 

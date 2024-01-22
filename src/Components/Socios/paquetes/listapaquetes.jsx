@@ -31,7 +31,7 @@ const Paquetes = ({ paquetes: paquetesProp, agregarpaquetesalcarrito }) => {
         setPaquetesData(data[0]); // Update here to set the array of paquetes
         // console.log(data);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        // console.error('Error fetching data:', error);
       }
     };
 
@@ -46,7 +46,7 @@ const Paquetes = ({ paquetes: paquetesProp, agregarpaquetesalcarrito }) => {
         setproductosata(data[0]); // Update here to set the array of paquetes
         // console.log(data);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        // console.error('Error fetching data:', error);
       }
     };
 

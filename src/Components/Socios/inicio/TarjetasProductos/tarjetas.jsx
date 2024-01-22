@@ -35,7 +35,7 @@ const Tarjetasq = ({ agregarProductoAlCarrito }) => {
               // console.log('Lista de favoritos actualizada:', res);
             })
             .catch((error) => {
-              console.error('Error de la solicitud:', error);
+              // console.error('Error de la solicitud:', error);
             });
         };
       }

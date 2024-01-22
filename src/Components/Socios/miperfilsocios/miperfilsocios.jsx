@@ -19,7 +19,7 @@ export const Perfil = () => {
                 console.log(data);
                 setPerfilM(data[0][0]);
             } catch (error) {
-                console.error('Error:', error);
+                // console.error('Error:', error);
                
             }
         }

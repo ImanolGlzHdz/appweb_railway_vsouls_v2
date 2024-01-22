@@ -23,7 +23,7 @@ const Tarjetasq = ({ agregarProductoAlCarritopv }) => {
             if (Array.isArray(res[0])) {
               setProductosA(res[0]);
             } else {
-              console.error('Data structure not as expected:', res);
+              // console.error('Data structure not as expected:', res);
             }
           })
           .catch(error => console.error('Error fetching data:', error));

@@ -15,10 +15,10 @@ const Socios = () => {
         if (data && data[0] && data[0].length > 0) {
           setSociosData(data[0]);
         } else {
-          console.error('No se encontraron datos de socios.');
+          // console.error('No se encontraron datos de socios.');
         }
       } catch (error) {
-        console.error('Error al obtener datos de socios:', error);
+        // console.error('Error al obtener datos de socios:', error);
       }
     }
   };

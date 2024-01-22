@@ -21,7 +21,7 @@ const Foro = () => {
         })
         .catch((error) => console.error('Error al obtener mensajes:', error));
     } else {
-      // console.error('idUsuarioGlobal no existe. La llamada a la API se ha evitado.');
+      // // console.error('idUsuarioGlobal no existe. La llamada a la API se ha evitado.');
     }
   };
   
@@ -47,10 +47,10 @@ const Foro = () => {
         // Limpia el textarea después de enviar el mensaje
         setNuevoMensaje('');
       } else {
-        console.error('Error al enviar el mensaje:', response.statusText);
+        // console.error('Error al enviar el mensaje:', response.statusText);
       }
     } catch (error) {
-      console.error('Error en la solicitud POST:', error);
+      // console.error('Error en la solicitud POST:', error);
     }
   };
 

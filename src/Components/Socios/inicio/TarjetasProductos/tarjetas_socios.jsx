@@ -20,7 +20,7 @@ const Tarjetas = () => {
 
       setCarritoProductos(carritoData[0]);
     } catch (error) {
-      console.error('Error al agregar producto al carrito:', error);
+      // console.error('Error al agregar producto al carrito:', error);
     }
 
     setShowModal(true);
@@ -37,7 +37,7 @@ const Tarjetas = () => {
 
       setCarritoProductos(carritoData[0]);
     } catch (error) {
-      console.error('Error al agregar producto al carrito:', error);
+      // console.error('Error al agregar producto al carrito:', error);
     }
 
     setShowModal(true);

@@ -52,10 +52,10 @@ const ModalComponent = ({ showModal, handleCloseModal }) => {
         
         // setCarritoProductos(carritoData[0]);
       } else {
-        console.error('Error en la respuesta de la suma de producto:', response.statusText);
+        // console.error('Error en la respuesta de la suma de producto:', response.statusText);
       }
     } catch (error) {
-      // console.error('Error al agregar producto al carrito:', error);
+      // // console.error('Error al agregar producto al carrito:', error);
     }
   };
 
@@ -78,10 +78,10 @@ const fetchData = async () => {
       setpaquetescarrito(data);
       // console.log('paquetescarrito actualizado:', data);
     } else {
-      console.error('La respuesta de la API no es un array válido:', data);
+      // console.error('La respuesta de la API no es un array válido:', data);
     }
   } catch (error) {
-    console.error('Error al obtener datos de la API:', error);
+    // console.error('Error al obtener datos de la API:', error);
   }
 };
 
@@ -110,7 +110,7 @@ const createPreference = async () => {
 
     setPreferenceId(id);
   } catch (error) {
-    console.error('Error al crear la preferencia de MercadoPago:', error);
+    // console.error('Error al crear la preferencia de MercadoPago:', error);
   }
 };
 
@@ -128,10 +128,10 @@ const createPreference = async () => {
         fetchCarritoData();
         setCarritoProductos(carritoData[0]);
       } else {
-        console.error('Error en la respuesta de la suma de producto:', response.statusText);
+        // console.error('Error en la respuesta de la suma de producto:', response.statusText);
       }
     } catch (error) {
-      console.error('Error al agregar producto al carrito:', error);
+      // console.error('Error al agregar producto al carrito:', error);
     }
   };
 
@@ -147,10 +147,10 @@ const createPreference = async () => {
         cargarTotales();
         setCarritoProductos(carritoData[0]);
       } else {
-        console.error('Error en la respuesta de la suma de producto:', response.statusText);
+        // console.error('Error en la respuesta de la suma de producto:', response.statusText);
       }
     } catch (error) {
-      console.error('Error al agregar producto al carrito:', error);
+      // console.error('Error al agregar producto al carrito:', error);
     }
   };
 
@@ -166,10 +166,10 @@ const createPreference = async () => {
         cargarTotales();
         setCarritoProductos(carritoData[0]);
       } else {
-        console.error('Error en la respuesta de la suma de producto:', response.statusText);
+        // console.error('Error en la respuesta de la suma de producto:', response.statusText);
       }
     } catch (error) {
-      console.error('Error al agregar producto al carrito:', error);
+      // console.error('Error al agregar producto al carrito:', error);
     }
   };
 
@@ -187,7 +187,7 @@ const createPreference = async () => {
             const total = Array.isArray(data) && data[0] && data[0][0] ? data[0][0].total : 0;
             return total;
           } catch (error) {
-            console.error(`Error al obtener datos de ${url}:`, error);
+            // console.error(`Error al obtener datos de ${url}:`, error);
             throw error; // Rethrow the error for centralized error handling
           }
         };
@@ -206,7 +206,7 @@ const createPreference = async () => {
       }
     } catch (error) {
       // Handle any global error or log it
-      console.error('Error al cargar totales:', error);
+      // console.error('Error al cargar totales:', error);
       // You may want to show a user-friendly error message on the frontend
     }
   };
@@ -222,7 +222,7 @@ const createPreference = async () => {
         // Actualizar el estado con la información filtrada
         settotalcondescuento(monedasObtenidas);
       } catch (error) {
-        // console.error('Error al obtener los datos:', error);
+        // // console.error('Error al obtener los datos:', error);
       }
     };
 
@@ -237,7 +237,7 @@ const createPreference = async () => {
       cargarTotales();
       setCarritoProductos(carritoData[0]);
     } catch (error) {
-      console.error('Error al cargar productos del carrito:', error);
+      // console.error('Error al cargar productos del carrito:', error);
     }} else {
       // idUsuarioGlobal no existe, realiza alguna acción o simplemente no hace nada
       // console.warn('idUsuarioGlobal no existe, no se realizará la solicitud al servidor.');
@@ -260,7 +260,7 @@ const createPreference = async () => {
       const paquetesData = data[0];
       setPaquetes(paquetesData);
     } catch (error) {
-      console.error('Error al obtener paquetes:', error);
+      // console.error('Error al obtener paquetes:', error);
     }
   };
 
@@ -270,7 +270,7 @@ const createPreference = async () => {
       const [productos, _] = await response.json();
       setCarritoData(productos);
     } catch (error) {
-      // console.error('Error fetching carrito data:', error);
+      // // console.error('Error fetching carrito data:', error);
     }
   };
 
@@ -286,7 +286,7 @@ const createPreference = async () => {
       cargarTotales();
       fetchCarritoData();
     } catch (error) {
-      console.error('Error al sumar paquete:', error);
+      // console.error('Error al sumar paquete:', error);
     }
   };
 
@@ -298,7 +298,7 @@ const createPreference = async () => {
       cargarTotales();
       fetchCarritoData();
     } catch (error) {
-      console.error('Error al restar paquete:', error);
+      // console.error('Error al restar paquete:', error);
     }
   };
 
@@ -310,7 +310,7 @@ const createPreference = async () => {
       cargarTotales();
       fetchCarritoData();
     } catch (error) {
-      console.error('Error al eliminar paquete:', error);
+      // console.error('Error al eliminar paquete:', error);
     }
   };
 
@@ -341,10 +341,10 @@ const createPreference = async () => {
         cargarProductosModalpv()
         setCarritoProductos(carritoData[0]);
       } else {
-        console.error('Error en la respuesta de la suma de producto:', response.statusText);
+        // console.error('Error en la respuesta de la suma de producto:', response.statusText);
       }
     } catch (error) {
-      console.error('Error al agregar producto al carrito:', error);
+      // console.error('Error al agregar producto al carrito:', error);
     }
   };
   const cargarProductosModalpv = async () => {
@@ -355,7 +355,7 @@ const createPreference = async () => {
       cargarTotales();
       setCarritoProductospv(carritoDatapv[0]);
     } catch (error) {
-      // console.error('Error al cargar productos del carrito:', error);
+      // // console.error('Error al cargar productos del carrito:', error);
     }} else {
       // idUsuarioGlobal no existe, realiza alguna acción o simplemente no hace nada
       // console.warn('idUsuarioGlobal no existe, no se realizará la solicitud al servidor.');

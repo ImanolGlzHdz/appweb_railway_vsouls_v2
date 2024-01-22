@@ -5,7 +5,7 @@ import axios from "axios";
 import {Modal, ModalBody, ModalHeader, ModalFooter }from 'reactstrap';
 import { FaRegHeart,FaCartPlus,FaCheckCircle, FaStar,FaRegStar } from 'react-icons/fa';
 import StarRating from './StarRating';
-import Catalogo, {product,o} from '../Catalogo/Catalogo';
+import Catalogo, {product} from '../Catalogo/Catalogo';
 import Favoritos,{productoF} from '../Favoritos/Favoritos';
 import {prod} from '../PaginaPrincipal/Principal2';
 import { prodCarrito } from '../NavegacionClients/Carrito';
