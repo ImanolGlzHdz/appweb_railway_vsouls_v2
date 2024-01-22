@@ -1,0 +1,98 @@
+.venta-exitosa {
+    background-color: lightgreen;
+    border: 1px solid green;
+    padding: 20px;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.venta-exitosa-titulo {
+    color: green;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.venta-exitosa-detalles {
+    height: auto;
+    background-color: white;
+    border: 1px solid green;
+    padding: 20px;
+}
+
+.venta-exitosa-detalles-texto {
+    color: green;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.botonVerDatosVentaExit{
+    background-color: transparent;
+    color: transparent;
+    border-color: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+    .venta-exitosa {
+        background-color: lightgreen;
+        border: 1px solid green;
+        padding: 20px;
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    
+    .venta-exitosa-titulo {
+        color: green;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .venta-exitosa-detalles {
+        height: auto;
+        background-color: white;
+        border: 1px solid green;
+        padding: 20px;
+    }
+    
+    .venta-exitosa-detalles-texto {
+        color: green;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    p{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .venta-exitosa {
+        background-color: lightgreen;
+        border: 1px solid green;
+        padding: 20px;
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    
+    .venta-exitosa-titulo {
+        color: green;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .venta-exitosa-detalles {
+        height: auto;
+        background-color: white;
+        border: 1px solid green;
+        padding: 20px;
+    }
+    
+    .venta-exitosa-detalles-texto {
+        color: green;
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+    p{
+        font-size: 10px;
+    }
+}

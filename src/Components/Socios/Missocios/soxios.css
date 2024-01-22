@@ -1,0 +1,16 @@
+.divgrande {
+    max-width: 70%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-height: 300px;
+  }
+  
+.listlist{
+    font-size: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.table-danger2{
+    background: aqua !important;
+}

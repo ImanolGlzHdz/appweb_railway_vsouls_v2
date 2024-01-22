@@ -1,0 +1,588 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.wrapperDp {
+  position: relative;
+  display: grid;
+  margin-top: 2%;
+  width: 80%;
+  margin-left: 12%;
+  margin-right: 8%;
+  grid-template-columns: 58% 42%;
+}
+.wrapperI {
+  position: relative;
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+
+.wrapperI .image-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+.wrapperI .image-wrapper .imgContent {
+  width: 45%;
+  margin-left: 27.5%;
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid #f8daf2;
+}
+.wrapperI .imgPrincipal #mainPhoto {
+  margin-top: 5px;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 20px;
+}
+
+.wrapperF .detalles h2 {
+  position: relative;
+  font-size: 23.5px;
+  letter-spacing: 2.5px;
+  color:rgb(34, 32, 32);
+  opacity: 0.85;
+  font-weight: 400px;
+}
+.wrapperF .detalles .precio {
+  display: flex;
+  letter-spacing: 0.7px;
+  margin: 5px 0px 0px 0px;
+}
+.detalles .precio h4{
+  color: #7e7b7d;
+  font-size: 17.5px;
+  text-decoration: line-through;
+  font-weight: 500;
+}
+.detalles .precio h3{
+  color: #c22f85;
+  font-size: 19.5px;
+  margin-left: 4.5%;
+  font-weight: 550;
+}
+.wrapperF .detalles .carr {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 28px;
+  grid-gap: 10%;
+}
+.detalles .carr .cant {
+  display: flex;
+  align-items: center;
+}
+.detalles .carr .cant h4{
+  font-size: 16.5px;
+  color:rgba(34, 32, 32, 0.863);
+  font-weight: 400;
+  letter-spacing: 0.4px;
+}
+.detalles .carr .cant .cantidad-input{
+  display: flex;
+  align-items: center;
+}
+.detalles .carr .cant .cantidad-input input[type="number"]{
+  width: 45px;
+  height: 35px;
+  font-size: 14px;
+  text-align: center !important;
+  border: transparent;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+input[type=number] { -moz-appearance:textfield; }
+.botonCantidadD{
+  background-color: #f3c1d7;
+  color: rgb(0,0,0);
+  width: 35px;
+  height: 35px;
+  font-size: 15.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.detalles .carr .btn .btnAdd {
+  position: relative;
+  width: 100%;
+  height: 33px;
+  color:#c22f85;
+  background: #ffff;
+  cursor: pointer;
+  border:1px solid #c22f85;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  border-radius: 4px;
+}
+.btn .btnAdd:hover{
+  background: #c22f85;
+  color: #ffff;
+}
+.btn .btnAdd .iconC {
+  width: 15%;
+}
+@keyframes clic {
+  0% {
+      transform: scale(1);
+  }
+  10% {
+      transform: scale(0.9);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+.detalles .descB .division{
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5%;
+  text-align: center;
+}
+.division li {
+  cursor: pointer;
+  margin: 4px;
+  border-radius: 2px;
+}
+.division li:hover {
+  background-color: #f3c1d7;
+}
+.division .d h4 {
+  font-size: 16.5px;
+  color:rgba(34, 32, 32, 0.863);
+  font-weight: 400;
+  
+  letter-spacing: .7px;
+  margin: 1%;
+}
+.detalles .descB .desc h5{
+  text-align: justify;
+  line-height: 25px;
+  margin: 10px;
+  font-size: 15px;
+  color: #353c46;
+}
+
+.wrapperCal {
+  position: relative;
+  margin-top: 2.5%;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 15%;
+}
+.wrapperCal .review h2{
+  font-size: 20px;
+  font-weight: 300px;
+  letter-spacing: 1.9px;
+  text-transform: uppercase;
+  color:rgb(34, 32, 32);
+  text-align: center;
+}
+.wrapperCal .review .review-div{
+  display: grid;
+  margin: 3.8%;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+.wrapperCal .review-div span {
+  color: goldenrod;
+  font-size: 16px;
+}
+.wrapperCal .review-div button {
+  width: 50%;
+  height: 40px;
+  color:#c22f85;
+  background: #ffff;
+  cursor: pointer;
+  border:1px solid #c22f85;
+  font-size: 14.5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400px;
+  border-radius: 4px;
+}
+.wrapperCal select{
+  width: 19%;
+  height: 40px;
+  background-color: transparent;
+  border-color: #f0f0f0;
+  text-align: center;
+  font-size: 13.5px;
+  color: #c22f85;
+  border-radius: 5px;
+  margin: 0.1% 2%;
+  letter-spacing: 0.05em;
+}
+
+.comen .rev .divF {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1% 0%;
+}
+.comen .rev span {
+  color: goldenrod;
+  font-size: 13.5px;
+}
+.comen .rev .divF h6 {
+  text-align: right;
+  font-size: 14px;
+  opacity: .95;
+  font-weight: 400;
+  letter-spacing: 0.7px;
+}
+.wrapperCal .coment .comen .rev .divUser {
+  display: flex;
+  grid-template-columns: 20% 80%;
+}
+.wrapperCal .coment .comen .rev .divUser h4 {
+  margin-left: 2%;
+  margin-top: 6px;
+  font-size: 15.5px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.wrapperCal .rev .textComent{
+  text-align: justify;
+}
+.wrapperCal .coment .comen .rev .textComent h6 {
+  margin: 2% 0;
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  letter-spacing: 0.7px;
+}
+.wrapperCal .coment .comen .rev .divC{
+  background: #c22f85;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  padding: 6.5px;
+  color: #F8F9F9;
+}
+.wrapperCal .coment .comen .rev .divC h5{
+  font-size: 17px;
+}
+.modalH {
+  text-align: center;
+  margin: 5%;
+}
+.modalH h3{
+  color: #c22f85;
+  letter-spacing: 1.9px;
+  font-size: 24px;
+  font-weight: 400;
+  z-index: 10px;
+}
+.divModal{
+  text-align: center;
+}
+
+.divModal .starrating {
+  position: relative;
+  background: #fae4ed;
+  border-radius: 5%;
+  width: 35%;
+  padding: 2% 2%;
+  margin-left: 32.5%;
+  box-shadow: 0 5px 10px rgb(167, 162, 164);
+}
+.divModal .starrating button {
+  background: none;
+  border:none;
+  letter-spacing: 25px;
+  font-size: 23px;
+}
+.divModal .starrating button:hover {
+  font-size: 26px;
+}
+
+.divModal .starrating .on {
+  color: goldenrod;
+}
+.divModal .starrating .off {
+  color: gray;
+}
+.botonesModal {
+  justify-content: center;
+}
+.enviar {
+  background: #ffff;
+  color: #c22f85;
+  border: 1px solid #c22f85;
+  border-radius: 4px;
+}
+.cancel {
+  background: #ffff;
+  color: #888;
+  border: 1px solid #888;
+  border-radius: 4px;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width:1023px){
+  .wrapperDp {
+    width: 87%;
+    margin-left: 8%;
+    margin-right: 5%;
+    grid-template-columns: 48% 52%;
+  }
+  .wrapperI .image-wrapper {
+    margin-top: 5%;
+  }
+  .wrapperI .image-wrapper .imgContent {
+    width: 65%;
+    margin-left: 17.5%;
+  }
+  .wrapperI .imgPrincipal #mainPhoto {
+    margin-top: 5%;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-bottom: 10%;
+  }
+
+  .wrapperF .detalles h2 {
+    font-size: 21px;
+  }
+  .detalles .precio h4{
+    font-size: 15.5px;
+  }
+  .detalles .precio h3{
+    font-size: 17.5px;
+  }
+  .wrapperF .detalles .carr {
+    margin-top: 18px;
+  }
+  .detalles .carr .cant {
+    grid-gap: 10px;
+  }
+  .detalles .carr .cant h4{
+    font-size: 15px;
+    margin: 1.5%;
+  }
+  .detalles .carr .cant .cantidad-input input[type="number"]{
+    width: 35px;
+    height: 25px;
+    font-size: 13.5px;
+  }
+  .detalles .carr .cant .cantidad-input .boton{
+    width: 25px;
+    height: 25px;
+    font-size: 14.5px;
+  }
+  .detalles .carr .btn .btnAdd {
+    width: 90%;
+    font-size: 13.5px;
+  }
+  .detalles .descB .division{
+    margin-top: 15px;
+  }
+  .division .d h4 {
+    font-size: 14.5px;
+    margin: 1.5%;
+  }
+  .detalles .descB .desc h5{
+    line-height: 23px;
+    font-size: 14px;
+
+  }
+
+  .wrapperCal {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+  }
+  .wrapperCal .review h2{
+    font-size: 18px;
+  }
+  .wrapperCal .review .review-div{
+    margin: 4%;
+  }
+  .wrapperCal .review-div span {
+    font-size: 14px;
+  }
+  .wrapperCal .review-div button {
+    width: 60%;
+    font-size: 12.5px;
+  }
+  .wrapperCal select{
+    width: 26%;
+    font-size: 12.5px;
+  }
+  .comen .rev span {
+    font-size: 13px;
+  }
+  .comen .rev .divF h6 {
+    font-size: 13.5px;
+  }
+  .wrapperCal .coment .comen .rev .divUser h4 {
+    font-size: 13px;
+  }
+  .wrapperCal .coment .comen .rev .textComent h6 {
+    font-size: 13px;
+  }
+
+}
+@media only screen and (max-width: 767px) {
+  .wrapperDp {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .wrapperI {
+    position: relative;
+    display: grid;
+    grid-template-columns: 25% 75%;
+  }
+  .wrapperI .image-wrapper .imgContent {
+    width: 70%;
+    margin-left: 25%;
+  }
+  .wrapperI .imgPrincipal #mainPhoto {
+    margin-top: 0px;
+    width: 90%;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom: 10%;
+  }
+
+  .wrapperF .detalles h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 22px;
+  }
+  .wrapperF .detalles .precio {
+    display: flex;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin:10px 28%;
+  }
+  .detalles .precio h4{
+    font-size: 13.5px;
+  }
+  .detalles .precio h3{
+    font-size: 14.5px;
+  }
+  .wrapperF .detalles .carr {
+    margin:2% 3%;
+  }
+  .detalles .carr .cant {
+    grid-gap: 10px;
+  }
+  .detalles .carr .cant h4{
+    font-size: 14px;
+    margin: 1%;
+  }
+  .detalles .carr .cant .cantidad-input input[type="number"]{
+    width: 35px;
+    height: 25px;
+    font-size: 14.5px;
+  }
+  .detalles .carr .cant .cantidad-input .boton{
+    width: 25px;
+    height: 25px;
+    font-size: 15.5px;
+  }
+  .detalles .carr .btn .btnAdd {
+    width: 90%;
+    font-size: 13.5px;
+  }
+  .detalles .descB .division{
+    margin-top: 15px;
+  }
+  .division .d h4 {
+    font-size: 14px;
+    margin: 1.5%;
+  }
+  .detalles .descB .desc h5{
+    line-height: 23px;
+    margin: 10px;
+    font-size: 12.5px;
+    color: #353c46;
+  }
+
+
+  .wrapperCal {
+    margin-top: 10%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .wrapperCal .review h2{
+    font-size: 15px;
+    letter-spacing: 1.5px;
+  }
+  .wrapperCal .review .review-div{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .wrapperCal .review-div span {
+    padding: 5% 0;
+    font-size: 13.5px;
+  }
+  .wrapperCal .review-div button {
+    width: 70%;
+    height: 35px;
+    font-size: 11.5px;
+  }
+  .wrapperCal select{
+    width: 42%;
+    font-size: 11.5px;
+  }
+  .comen .rev span {
+    font-size: 12px;
+  }
+  .comen .rev .divF h6 {
+    font-size: 12.5px;
+  }
+  .wrapperCal .coment .comen .rev .divUser h4 {
+    font-size: 11.5px;
+  }
+  .wrapperCal .coment .comen .rev .textComent h6 {
+    font-size: 13.5px;
+  }
+  .wrapperCal .coment .comen .rev .divC{
+    width: 30px;
+    height: 30px;
+  }
+  .wrapperCal .coment .comen .rev .divC h5{
+    font-size: 13.5px;
+  }
+  .wrapperCal .coment .comen .rev .textComent h6 {
+    font-size: 10px;
+  }
+  .modalPr{
+    width: 50%;
+  }
+  .modalH h3{
+    font-size: 15px;
+  }
+
+  .divModal .starrating {
+    width: 50%;
+    margin-left: 25%;
+  }
+  .divModal .starrating button {
+    background: none;
+    border:none;
+    letter-spacing: 25px;
+    font-size: 18px;
+  }
+  .divModal .starrating button:hover {
+    font-size: 19px;
+  }
+
+}

@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.contEnvio{
+    background: #c22f85;
+    height: 30px;
+    padding: 0.15rem calc((100vw - 1500px) / 2);
+    display: flex;
+}
+.contEnvio h1{
+    font-size: 11px;
+    letter-spacing: 00.7px;
+    color: white;
+    animation:slidein 6s linear infinite;
+}
+@keyframes slidein {
+    from {
+        margin-left: 45%;
+    }to{
+        margin-left: 20%;
+    }
+}
+svg{
+    height: 15px !important;
+    margin-left: 3px;
+}
+.contEnvio .redes a{
+    position: relative;
+    height:22.5px;
+    width: 22.5px;
+    margin: 0 8px;
+    padding: 3px 0px;
+    display: inline-flex;
+    text-decoration: none;
+    color: #e0c8d8;
+    border-radius: 50%;
+    transition: all 0.3s;
+    box-shadow: -2px -2px 5px rgb(223, 129, 195), 2px 2px 3px #b8649e;
+}
+
+.contEnvio .redes a:hover{
+    background: #e0c8d8;
+    color: #c22f85;
+}
+.conttop img{
+    width: 115px;
+    margin-top: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex; /* Cambiamos a flexbox para alinear elementos horizontalmente */
+}
+nav ul li.opciones {
+    padding: 8px 10px;
+    font-size: 13px !important;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    
+}
+.bold{
+    font-size: 10px;
+    font-weight: bold
+}
+.link {
+    color: rgb(34, 32, 32);
+    letter-spacing: 0.7px;
+    font-size: 13px;
+    font-weight: 500;
+    opacity: .9;
+}
+
+.link::after{
+    content: '';
+    width: 0;
+    height: 4px;
+    background-color: #c22f85;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transition: all .5s;
+}
+  
+.link:hover::after{
+    width: 100%;
+    right: 0;
+} 
+nav .iconos{
+    padding: 0px 35px;
+    margin: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #3B3D3D;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color .5s;
+}
+nav .iconostexto{
+    padding: 5px 15px;
+    margin: 5px;
+    /* font-size: 18px; */
+    font-weight: 400;
+    color: #3B3D3D;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color .5s;
+}
+nav .iconos:hover {
+    color: #c22f85;
+}
+.containermenu {
+    position: relative;
+    transform: translate(-0%,-0%);
+    padding: 2px 15px;
+    margin-right: 10px;
+}
+.search-form {
+	position: relative;
+	display: flex;
+	align-items: center;
+	border: 2px solid #C74D9D;
+	border-radius: 2rem;
+	background-color: #fff;
+	height: 32px;
+	overflow: hidden;
+}
+
+.search-form input {
+	outline: none;
+	font-family: inherit;
+	border: none;
+	padding: 0px 6px;
+	color: #777;
+}
+
+.search-form input::-webkit-search-cancel-button {
+	appearance: none;
+}
+
+.search-form .btn-search {
+	border: none;
+	background-color: var(--primary-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	padding: 1rem;
+}
+
+.btn-search i {
+	font-size: 2rem;
+	color: #fff;
+}
+.inputmenu {
+    outline: none;
+    box-sizing: border-box;
+    height: 30px;
+    width: 0px;
+    color: #000;
+    border-radius: 50px;
+    font-size: 15px;
+    border: 1px solid #0b224d;
+    transition: all .7s ease;
+}
+
+::placeholder {
+    color: grey;
+}
+
+.btnmenu {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 35px;
+    height: 35px;
+    background: #0b224d;
+    line-height: 30px;
+    border-radius: 50%;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btnmenu .imenu {
+    padding: 0px 10px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color .5s;
+    color: white;
+    transition: all .7s ease;
+}
+
+.containermenu:hover .inputmenu {
+    width: 200px;
+}
+
+.containermenu:hover .imenu{
+    transform: rotate(-360deg);
+}
+
+.btnmenu:hover{
+    background: #0b224d;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .contEnvio{
+        height: 45px !important;
+        display: grid;
+        padding: 0.15rem calc((100vw - 1100px) / 2);
+    }
+    .contEnvio h1{
+        font-size: 8px;
+        letter-spacing: 00.6px;
+        padding: 2px;
+    }
+    @keyframes slidein {
+        from {
+            margin-left: 35%;
+        }to{
+            margin-left: 15%;
+        }
+    }
+    
+    .contEnvio .redes a{
+        height:20px !important;
+        width: 20px !important;
+        margin: 0 5px !important;
+        padding: 2.3px 2.3px !important;
+    }
+
+    .search-form {
+        width: 32%;
+    }
+    
+    .search-form input {
+        padding: 0px 3px;
+        font-size: 12px;
+    }
+
+}

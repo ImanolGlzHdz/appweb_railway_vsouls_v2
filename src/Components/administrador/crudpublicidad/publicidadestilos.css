@@ -1,0 +1,282 @@
+/* Import Google font - Poppins */
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"); */
+
+:root {
+	--primary-color: #a8acff;
+	--secondary-color: #f1f2ff;
+	--terceary-color: #a8acff;
+
+	--button-normal: #ef0ae1;
+	--button-hover: #ffc9fb;
+
+	--background-color: #f1f2ff;
+
+	--dark-color: #151515;
+
+	--violet-eggplant-50: #fff2fe;
+	--violet-eggplant-100: #ffe4fd;
+	--violet-eggplant-200: #ffc9fb;
+	--violet-eggplant-300: #ff9ef4;
+	--violet-eggplant-400: #ff64ec;
+	--violet-eggplant-500: #ff2bec;
+	--violet-eggplant-600: #ef0ae1;
+	--violet-eggplant-700: #c304b3;
+	--violet-eggplant-800: #a20693;
+	--violet-eggplant-900: #840b76;
+	--violet-eggplant-950: #5a0050;
+
+	--navy-blue-50: #f1f2ff;
+	--navy-blue-100: #e5e6ff;
+	--navy-blue-200: #cfd4ff;
+	--navy-blue-300: #a8acff;
+	--navy-blue-400: #7778ff;
+	--navy-blue-500: #4a41ff;
+	--navy-blue-600: #331aff;
+	--navy-blue-700: #2209f8;
+	--navy-blue-800: #1c07d0;
+	--navy-blue-900: #1908aa;
+	--navy-blue-950: #0a0183;
+
+
+}
+
+.todopublicidad {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+  /* font-family: "Poppins", sans-serif; */
+  /* height: 100vh; */
+}
+.limitetabla{
+  margin-top: 100px;
+}
+.tamanioimagen2{
+  max-width: 600px !important;
+  max-height: 300px !important;
+}
+.listapubli{
+  font-size: 3rem;
+  position: relative
+}
+
+.menudepublicidad{
+  position: absolute;
+}
+.limitemonedas{
+  margin-top: 9%;
+}
+.sizefont{
+  font-size: 1.7rem !important;
+}
+.sizefontmen{
+  font-size: 1rem !important;
+}
+.sizefont3{
+  font-size: .7rem !important;
+}
+.todobodypublicidad {
+  min-height: 100vh;
+  display: grid;
+  orientation: vertical;
+  align-items: center;
+  font-size: 1.5rem;
+  justify-content: center;
+  padding: 20px;
+  background: rgb(0, 0, 0);
+  position: initial;
+  color: #7778ff;
+}
+
+.margen{
+  margin: 10px;
+}
+.toptabla{
+  margin-top: 20vh;
+}
+
+.moveratras{
+  position: initial !important;
+}
+.react-datepicker__input-container{
+  position: initial !important;
+}
+.containerpubli {
+  color: #fff;
+  /* position: initial; */
+  min-width: 1000px;
+  width: 100%;
+  background: #7778ff20;
+  padding: 0px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 2);
+}
+.custom-datepicker {
+  font-size: 16px; /* ajusta el tamaño del texto dentro del DatePicker según tus necesidades */
+  width: 100px; /* ajusta el ancho del DatePicker según tus necesidades */
+  /* Agrega cualquier otra regla de estilo que desees */
+}
+.toptabla2{
+  margin-top: 5% !important;
+}
+/* .table2{
+  max-width: 60% !important;
+  font-size: .5rem !important;
+} */
+.table2 {
+  width: 50%; /* Ajusta el ancho de la tabla según tus necesidades */
+  margin: auto; /* Centra la tabla en el contenedor padre */
+}
+
+/* Puedes ajustar estos estilos según tus preferencias */
+.table2 th, .table2 td {
+  padding: 8px; /* Ajusta el espacio interno de las celdas */
+  font-size: 10px; /* Ajusta el tamaño de la fuente */
+}
+.containerpubli2 {
+  color: #fff;
+  /* position: initial; */
+  min-width: 800px;
+  width: 50%;
+  /* background: #7778ff20; */
+  padding: 0px;
+  border-radius: 8px;
+  /* box-shadow: 0 0 15px rgba(255, 255, 255, 2); */
+}
+
+.sizefont2{
+  font-size: 1.6rem;
+}
+.activo{
+    color: #fff;
+}
+@media screen and (max-width: 700px) {
+  .sizefont2{
+    font-size: .5rem;
+  }
+    .containerpubli{
+        background: black;
+        min-width: 300px;
+    }
+    .containerpubli2{
+      background: black;
+      min-width: 300px;
+  }
+    .tablatamanio{
+      padding: 20px;
+    }
+    .tamanioimagen{
+      max-width: 250px;
+      max-height: 100px;
+    }
+    .tamanioletra{
+      font-size: 10px;
+    }
+    .tamanioletratitulo{
+      font-size: 30px;
+    }
+}
+
+.containerpubli .headerpubli {
+  font-size: 1.5rem;
+  /* color: #333; */
+  font-weight: 500;
+  text-align: center;
+}
+.containerpubli .form {
+  margin-top: 30px;
+}
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+/* .input-box .labelpubli {
+  color: #333;
+} */
+.form :where(.input-box .inputpubli, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box .inputpubli:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.form .gender-box {
+  margin-top: 20px;
+}
+.gender-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form .gender {
+  column-gap: 5px;
+}
+.gender .inputpubli {
+  accent-color: rgb(130, 106, 251);
+}
+.form :where(.gender .inputpubli, .gender .labelpubli) {
+  cursor: pointer;
+}
+.gender .labelpubli {
+  color: #707070;
+}
+.address :where(.inputpubli, .select-box) {
+  margin-top: 15px;
+}
+.select-box .selectpubli {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+.form .butonpubli {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(130, 106, 251);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.form .butonpubli:hover {
+  background: rgb(88, 56, 250);
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}
+
+.titulomio{
+  font-size: 1.5rem;
+  text-align: center;
+}

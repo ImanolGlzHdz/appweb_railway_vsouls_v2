@@ -1,0 +1,144 @@
+.venta-fallida {
+    background-color: rgb(255, 105, 100);
+    border: 1px solid rgb(255, 46, 27);
+    padding: 20px;
+    width: 500px;
+    margin: 20px auto;
+}
+
+.venta-fallida-titulo {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+@keyframes reject-sale {
+    0% {
+        color: rgb(255, 255, 255);
+    }
+
+    10% {
+        color: rgb(233, 233, 233);
+    }
+
+    15% {
+        color: rgb(192, 192, 192);
+    }
+
+    20% {
+        color: rgb(163, 163, 163);
+    }
+
+    25% {
+        color: rgb(155, 155, 155);
+    }
+    30% {
+        color: rgb(146, 146, 146);
+    }
+
+    35% {
+        color: rgb(139, 139, 139);
+    }
+
+    40% {
+        color: rgb(130, 130, 130);
+    }
+
+    45% {
+        color: rgb(119, 119, 119);
+    }
+
+
+    50% {
+        color: rgb(99, 99, 99);
+    }
+    55% {
+        color: rgb(81, 81, 81);
+    }
+
+    60% {
+        color: rgb(71, 71, 71);
+    }
+
+    65% {
+        color: rgb(61, 61, 61);
+    }
+
+    70% {
+        color: rgb(53, 53, 53);
+    }
+
+
+    75% {
+        color: rgb(46, 46, 46);
+    }
+
+    80% {
+        color: rgb(36, 36, 36);
+    }
+
+    85% {
+        color: rgb(29, 29, 29);
+    }
+
+    90% {
+        color: rgb(21, 21, 21);
+    }
+
+    95% {
+        color: rgb(17, 17, 17);
+    }
+
+    100% {
+        color: rgb(0, 0, 0);
+    }
+}
+
+.rejected-sale {
+    animation-name: reject-sale;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@media only screen and (max-width: 768px) {
+    .venta-fallida {
+        background-color: rgb(255, 105, 100);
+        border: 1px solid rgb(255, 46, 27);
+        padding: 20px;
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin: 20px auto;
+    }
+    
+    .rejected-sale{
+        color: rgb(0, 0, 0);
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    p{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .venta-fallida {
+        background-color: rgb(255, 105, 100);
+        border: 1px solid rgb(255, 46, 27);
+        padding: 20px;
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin: 20px auto;
+    }
+    
+    .rejected-sale{
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    p{
+        font-size: 10px;
+    }
+}
