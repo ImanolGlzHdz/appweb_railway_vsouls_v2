@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Modal, Table } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../style/estilostablamodal.css'
 import '../DetalleProduct/stylesdetalleprod.css'
 import '../inicio/Tarjetasprimeravez/stylescatalogo2.css';
 import { FaRegHeart, FaCartPlus, FaHeart, FaStar } from 'react-icons/fa';

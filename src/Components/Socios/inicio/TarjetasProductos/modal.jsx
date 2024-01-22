@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Modal, Table } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../../style/estilostablamodal.css'
 import Menu, { idUsuarioGlobal } from '../../Menu/menusocios';
 import '../../style_socios.css';
 import axios from "axios";

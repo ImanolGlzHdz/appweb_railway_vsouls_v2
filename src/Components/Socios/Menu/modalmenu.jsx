@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Modal, Table } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../style/estilostablamodal.css'
 import '../DetalleProduct/stylesdetalleprod.css'
 import '../inicio/Tarjetasprimeravez/stylescatalogo2.css';
 import { FaRegHeart, FaCartPlus, FaHeart, FaStar } from 'react-icons/fa';
@@ -376,8 +377,8 @@ const createPreference = async () => {
           </Modal.Header>
           <Modal.Body>
             <div className="sizefontmen d-flex justify-content-between">
-              <h2>Productos del Carrito:</h2>
-              <h2>${totalprod}</h2>
+              <h2 className='sizefonttitulos'>Productos del Carrito:</h2>
+              <h2 className='sizefonttitulos'>${totalprod}</h2>
             </div>
 
       
@@ -394,7 +395,7 @@ const createPreference = async () => {
           <span className="carrito-item-precio">{`$${carritoprod.PRECIO_PRIMERAVEZ}`}</span>
         </div>
         <span className="btn-eliminar" onClick={() => eliminarProductoPV(carritoprod.CLAVE_PRODUCTO)}>
-        <img className='i' width="30" height="30" src={eliminar} alt="delete" />
+        <img className='eliminar' width="30" height="30" src={eliminar} alt="delete" />
         </span>
       </div>
     ))}
@@ -404,15 +405,19 @@ const createPreference = async () => {
         <div className="carrito-item-detalles">
           <span className="carrito-item-titulo sizefontmen">{carritoprod.nombre_p}</span>
           <div className="selector-cantidad">
-            <i className="i i22 fa-solid fa-minus restar-cantidad" onClick={() => restarProducto(carritoprod.CLAVE_PRODUCTO)}></i>
+            <i className="i i22 fa-solid fa-minus restar-cantidad" onClick={() => restarProducto(carritoprod.CLAVE_PRODUCTO)}>
+-
+            </i>
             <input type="text" value={carritoprod.cantidad} className="carrito-item-cantidad" disabled />
-            <i className="i fa-solid fa-plus sumar-cantidad" onClick={() => sumarProducto(carritoprod.CLAVE_PRODUCTO)}></i>
+            <i className="i fa-solid fa-plus sumar-cantidad" onClick={() => sumarProducto(carritoprod.CLAVE_PRODUCTO)}>
++
+            </i>
           </div>
           <span className="carrito-item-precio">{`$${carritoprod.precio_socio_p}`}</span>
         </div>
         <span className="btn-eliminar">
           
-        <img className='i' width="30" height="30" src={eliminar} alt="delete" onClick={() => eliminarProducto(carritoprod.CLAVE_PRODUCTO)}/>
+        <img className='eliminar' width="30" height="30" src={eliminar} alt="delete" onClick={() => eliminarProducto(carritoprod.CLAVE_PRODUCTO)}/>
         </span>
       </div>
     ))}
@@ -435,8 +440,8 @@ const createPreference = async () => {
 
 
             <div className="d-flex justify-content-between">
-              <h2>Productos en paquete:</h2>
-              <h2>${totalpaqu}</h2>
+              <h2 className='sizefonttitulos'>Productos en paquete:</h2>
+              <h2 className='sizefonttitulos'>${totalpaqu}</h2>
             </div>
             
             {Object.entries(organizedData).map(([seccion, data]) => (
@@ -452,21 +457,21 @@ const createPreference = async () => {
                   
 
                    
-                    <div className="selector-cantidad cardmw">
-            <i className="i2 fa-solid fa-minus restar-cantidad2" onClick={() => restarPaquete(idUsuarioGlobal, data.productos[0].ID_PAQUETE)}></i>
+                    <div className="selector-cantidad2 cardmw">
+            <i className="i2 fa-solid fa-minus restar-cantidad2" onClick={() => restarPaquete(idUsuarioGlobal, data.productos[0].ID_PAQUETE)}>-</i>
             <input type="text"  value={data.cantidad}  className="carrito-item-cantidad" disabled />
-            <i className="i2 fa-solid fa-plus sumar-cantidad" onClick={() => sumarPaquete(idUsuarioGlobal, data.productos[0].ID_PAQUETE)}></i>
+            <i className="i2 fa-solid fa-plus sumar-cantidad" onClick={() => sumarPaquete(idUsuarioGlobal, data.productos[0].ID_PAQUETE)}>+</i>
           </div>
                   <span className="btn-eliminar" onClick={() => eliminarPaquete(idUsuarioGlobal, data.productos[0].ID_PAQUETE)}>
                     
-                  <img className='i' width="30" height="30" src={eliminar} alt="delete"/>
+                  <img className='eliminar' width="30" height="30" src={eliminar} alt="delete"/>
                   </span>  
                   <div className="carrito-item-detalles " >
                   {data.productos.map((item, index) => (
                       <div key={index} className='d-flex justify-content-between'>
-                        <span className="carrito-item-titulo sizefont3">{item.NOMBRE_P}</span>
+                        <span className="carrito-item-titulo sizefont33">{item.NOMBRE_P}</span>
                        
-                        <span className="carrito-item-precio sizefont3 ">{item.cantidaddeproductosporpaquete}</span>                 
+                        <span className="carrito-item-precio sizefont33 ">{item.cantidaddeproductosporpaquete}</span>                 
                       
                       </div>
                         
