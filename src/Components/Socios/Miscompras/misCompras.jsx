@@ -192,7 +192,7 @@ const organizarPorIdVenta = () => {
           <h5 className={`h5 ${comprasIdVenta2[0].STATUS_VENTA_SOCIOS === 1 ? 'verde' : (comprasIdVenta2[0].STATUS_VENTA_SOCIOS === 2 ? 'azul' : 'pendiente')}`}>
             {comprasIdVenta2[0].STATUS_VENTA_SOCIOS === 1 ? 'Pedido Entregado' : (comprasIdVenta2[0].STATUS_VENTA_SOCIOS === 2 ? 'Enviado' : 'Pendiente')}
           </h5>
-          <div className=''>
+          <div className='wrapperList'>
             <table className="default">
               <thead>
                 <tr>

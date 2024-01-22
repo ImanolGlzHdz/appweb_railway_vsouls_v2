@@ -1,381 +1,391 @@
 .noscript-message {
-    display: none;
-  }
-  
-  * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI';
-    }
-    .tamanioimagen{
-      width: 100px;
-      height: 20px;
-    }
-  
-  
-    .tamaniouser{
-      width: 250px;
-      height: 200px;
-    }
-  
-    .tamanioicon{
-      font-size: 50px;
-    }
-  
-    
-  
-    .botonF{
-    background-image: linear-gradient(92.88deg, #ca388d 9.16%, #ab1f71 43.89%, #8f0b58 64.72%);
-    border-radius: 8px;
-    border-style: none;
+  display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    flex-shrink: 0;
-    font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    height: 3rem;
-    width: 13rem;
-    padding: 0 1.6rem;
-    text-align: center;
-    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
-    transition: all .5s;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+    font-family: 'Segoe UI';
   }
-  
-  @media (min-width: 768px) {
-    .button {
-      padding: 0 2.6rem;
-    }
+  .tamanioimagen{
+    width: 100px;
+    height: 20px;
   }
-  
-  /*------------------------FORMULARIOS ---------------*/
-  
-  /*------------------------FORMULARIO LOGIN ---------------*/
-  
-    .formulario{
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-      text-align: center;
-      
+
+
+  .tamaniouser{
+    width: 250px;
+    height: 200px;
   }
-  
-  .elementoL{
-    /*display: flex;
-    background: rgba(red, green, blue, alpha);*/
-    background-color: white 600px solid;
-    
+
+  .tamanioicon{
+    font-size: 50px;
   }
+
   
-  
-  /*------------------------FORMULARIO  CLIENTE---------------*/
-  
-  .formularioC{
+
+  .botonF{
+  background-image: linear-gradient(92.88deg, #ca388d 9.16%, #ab1f71 43.89%, #8f0b58 64.72%);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 3rem;
+  width: 13rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 0 2.6rem;
+  }
+}
+
+/*------------------------FORMULARIOS ---------------*/
+
+/*------------------------FORMULARIO LOGIN ---------------*/
+
+  .formulario{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
     text-align: center;
-  }
-  
-  /*------------------------FIN FORMULARIOS ---------------*/
-  
-  .borde {
-    border:white 60px solid;
-  }
-  
-  
-    body {
-      margin: 0;
-      padding: 0;
-    }
     
-    .container {
-      background: #fff;
-      display: flex;
-      flex-direction: column; /* Cambiamos la dirección de la columna */
-    }
-    
-    /*nav {
-      background: #f3c1d7;
-      border-radius: 0;  Eliminamos el redondeo de los bordes 
-      padding: 10px;
-      box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.4);
-      display: flex;
-      justify-content: space-between;  Alineamos elementos a los lados 
-      align-items: center;  Centramos verticalmente 
-    }
+}
+
+.elementoL{
+  /*display: flex;
+  background: rgba(red, green, blue, alpha);*/
+  background-color: white 600px solid;
   
-  
-  
-  
-  
-    nav ul {
-      list-style: none;
-      display: flex;  Cambiamos a flexbox para alinear elementos horizontalmente 
-      margin: 0;
-      padding: 0;
-    }
-    
-    nav ul li {
-      padding: 13px 35px;
-      margin: 10px;
-      font-size: 18px;
-      font-weight: 500;
-      color: #000000;
-      cursor: pointer;
-      position: relative;
-      z-index: 2;
-      transition: color .5s;
-    }
-    
-    nav ul li::after {
-      content: '';
-      background: #8f0b58;
-      width: 100%;
-      height: 100%;
-      border-radius: 20px;
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: -1;
-      opacity: 0;
-    }
-    
-    nav ul li:hover {
-      color: #fff;
-    }
-    
-    nav ul li:hover::after {
-      top: 50%;
-      opacity: 1;
-    }*/
-    
-  #lista{
-    background-color: #fff;
-    border-color: #fff;
+}
+
+
+/*------------------------FORMULARIO  CLIENTE---------------*/
+
+.formularioC{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/*------------------------FIN FORMULARIOS ---------------*/
+
+.borde {
+  border:white 60px solid;
+}
+
+
+  body {
+    margin: 0;
+    padding: 0;
   }
   
-    /*----------------------FOOOTER---------------------------
-    .wrapper {
-      min-height: calc(100% - 4rem);
-     
-    }
-    .footer {
-      background-color: #dcdbe46e;
-      padding-top: 1rem;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      
+  .container {
+    background: #fff;
+    display: flex;
+    flex-direction: column; /* Cambiamos la dirección de la columna */
   }
   
-  .footer h2{
-      text-transform: uppercase; /*COLOCA TODOS COMO MAYUSCULAS
-  
-  }
-  
-  @media screen and (min-width:768px) {
-      .footer .contenedor1{
-          display: flex;
-          
-      }
-      .footer .caja1{
-          flex: 1;
-         
-      }
-  }
-  
-  .copyright{
-       background-color: #f3c1d7;
-       margin: 2rem 0 0 0;
-       padding: 1rem 0 ;
-       text-align: center;
-  }
-  
-  /*SOCIALES
-  
-  .sociales ul li span{
-      display: none;
-  }
-  
-  .sociales ul{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      /*justify-content: flex-end;
-      justify-content: center;
-      
-      justify-content: space-around;
-      justify-content: space-between;
-      
-      flex: 1 0 auto;
-      list-style: none;
-  }
-  
-  .sociales ul li a:before {
-      font-family: "Font Awesome 5 Brands";
-      color: #1f03f36e;
-      font-size: 2rem;
-  }
-  
-  .sociales ul li{
-      margin-right:1rem;
-      
-  }
-  
-  .sociales ul li img{
-      text-decoration: none;
-      overflow:hidden;
-  }
-  
-  .m{
-    
-    overflow:hidden;
-  }
-  
-  
-  .m:hover .im{
-    -webkit-transform:scale(1.5);transform:scale(1.5);
-  }
-  /*.contenedor {
-    overflow:hidden;
-  }
-  
-  
-  .contenedor1 li{
-      list-style: none;
-      justify-content: space-between;
-  }
-  
-  .contenedor1 {
-    max-width: 1100px;
-    margin: 0 auto;
-    
-  }
-  
-  
-  .footer hr{
+  /*nav {
+    background: #f3c1d7;
+    border-radius: 0;  Eliminamos el redondeo de los bordes 
+    padding: 10px;
     box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;  Alineamos elementos a los lados 
+    align-items: center;  Centramos verticalmente 
+  }
+
+
+
+
+
+  nav ul {
+    list-style: none;
+    display: flex;  Cambiamos a flexbox para alinear elementos horizontalmente 
+    margin: 0;
+    padding: 0;
   }
   
-    /*----------------------FIN FOOOTER---------------------------*/
-  
-      /*----------------------CARRUSEL---------------------------*/
-  
-    .tamaniocar{
-      width: 1450px;
-      height: 500px;
-      align-items: center;
-    }
-  
-  /*---------------------- FIN CARRUSEL---------------------------*/
-  
-  
-  
-  /*----------------------LOGIN---------------------------*/
-  .letras{
-   --mainFont: 'Open Sans', sans-serif;
-   --mainColor: #333333;
+  nav ul li {
+    padding: 13px 35px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color .5s;
   }
   
-  .bodyL {
-      /*background-image: linear-gradient( 135deg, #FAB2FF 10%, #1904E5 100%);*/
-    background-image: url(./log.jpeg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      font-family: --mainFont;
-      color: --mainColor;
-    min-height: 100vh;
-    align-items: end;
+  nav ul li::after {
+    content: '';
+    background: #8f0b58;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
   }
   
-  .caja{
-      margin: 0 auto;
-      width: 600px;	
-      height: 450px;
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      border:rgba(red, green, blue, alpha) 10px solid;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      
-      /*box-shadow: 0 0 20px 6px #090b6f85;*/
+  nav ul li:hover {
+    color: #fff;
   }
   
-  .L{
-    left: 0;
-  }
+  nav ul li:hover::after {
+    top: 50%;
+    opacity: 1;
+  }*/
   
-  .bon{
-    background: white;
+#lista{
+  background-color: #fff;
+  border-color: #fff;
+}
+
+  /*----------------------FOOOTER---------------------------
+  .wrapper {
+    min-height: calc(100% - 4rem);
+   
   }
-  
-  
-  /*----------------------FIN LOGIN---------------------------*/
-  
-  /*----------------------CONTENIDO---------------------------*/
-  
-  
-  .contenido {
-    background-color: rgb(207, 200, 200);
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-  }
-  .contenido {
-    padding: 1rem;
-    text-align: center;
-  }
-  .contenido h3 {
-    text-align: center;
-    font-size: .9rem;
-    line-height: 1.4rem;
-  }
-  .contenido span {
-    color:#378ee6;
-  }
-  .boton {
-    background-color: #008fd1;
-    color: rgb(207, 200, 200);
-    padding: .6rem 2rem;
-    margin-top: 1rem;
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-  @media screen and (min-width:480px) {
-    .contenido-principal {
+  .footer {
+    background-color: #dcdbe46e;
+    padding-top: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.footer h2{
+    text-transform: uppercase; /*COLOCA TODOS COMO MAYUSCULAS
+
+}
+
+@media screen and (min-width:768px) {
+    .footer .contenedor1{
         display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        
     }
-    .entrada {
-        flex: 0 1 calc(50% - 1rem);
-  
+    .footer .caja1{
+        flex: 1;
+       
     }
-  }
+}
+
+.copyright{
+     background-color: #f3c1d7;
+     margin: 2rem 0 0 0;
+     padding: 1rem 0 ;
+     text-align: center;
+}
+
+/*SOCIALES
+
+.sociales ul li span{
+    display: none;
+}
+
+.sociales ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /*justify-content: flex-end;
+    justify-content: center;
+    
+    justify-content: space-around;
+    justify-content: space-between;
+    
+    flex: 1 0 auto;
+    list-style: none;
+}
+
+.sociales ul li a:before {
+    font-family: "Font Awesome 5 Brands";
+    color: #1f03f36e;
+    font-size: 2rem;
+}
+
+.sociales ul li{
+    margin-right:1rem;
+    
+}
+
+.sociales ul li img{
+    text-decoration: none;
+    overflow:hidden;
+}
+
+.m{
   
-  @media screen and (min-width:768px) {
-    .entrada {
-        flex: 0 1 calc(33% - 1rem);
-    }
-  }
+  overflow:hidden;
+}
+
+
+.m:hover .im{
+  -webkit-transform:scale(1.5);transform:scale(1.5);
+}
+/*.contenedor {
+  overflow:hidden;
+}
+
+
+.contenedor1 li{
+    list-style: none;
+    justify-content: space-between;
+}
+
+.contenedor1 {
+  max-width: 1100px;
+  margin: 0 auto;
   
-  .tamanioImagenP{
-    width: 450px;
-    height: 450px;
+}
+
+
+.footer hr{
+  box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.4);
+}
+
+  /*----------------------FIN FOOOTER---------------------------*/
+
+    /*----------------------CARRUSEL---------------------------*/
+
+  .tamaniocar{
+    width: 1450px;
+    height: 500px;
     align-items: center;
   }
-  
-  
-  
-  /*----------------------FIN CONTENIDO---------------------------*/
+
+/*---------------------- FIN CARRUSEL---------------------------*/
+
+
+
+/*----------------------LOGIN---------------------------*/
+.letras{
+ --mainFont: 'Open Sans', sans-serif;
+ --mainColor: #333333;
+}
+
+.bodyL {
+    /*background-image: linear-gradient( 135deg, #FAB2FF 10%, #1904E5 100%);*/
+  background-image: url(./log.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: --mainFont;
+    color: --mainColor;
+  min-height: 100vh;
+  align-items: end;
+}
+
+.caja{
+    margin: 0 auto;
+    width: 600px;	
+    height: 450px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border:rgba(red, green, blue, alpha) 10px solid;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    /*box-shadow: 0 0 20px 6px #090b6f85;*/
+}
+
+.L{
+  left: 0;
+}
+
+.bon{
+  background: white;
+}
+
+
+/*----------------------FIN LOGIN---------------------------*/
+
+/*----------------------CONTENIDO---------------------------*/
+
+
+.contenido {
+  background-color: rgb(207, 200, 200);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.contenido {
+  padding: 1rem;
+  text-align: center;
+}
+.contenido h3 {
+  text-align: center;
+  font-size: .9rem;
+  line-height: 1.4rem;
+}
+.contenido span {
+  color:#378ee6;
+}
+.boton {
+  background-color: #008fd1;
+  color: rgb(207, 200, 200);
+  padding: .6rem 2rem;
+  margin-top: 1rem;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+@media screen and (min-width:480px) {
+  .contenido-principal {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
+  .entrada {
+      flex: 0 1 calc(50% - 1rem);
+
+  }
+}
+
+@media screen and (min-width:768px) {
+  .entrada {
+      flex: 0 1 calc(33% - 1rem);
+  }
+}
+
+.tamanioImagenP{
+  width: 450px;
+  height: 450px;
+  align-items: center;
+}
+
+
+
+/*----------------------FIN CONTENIDO---------------------------*/
+
+@media (max-width: 768px) {
+  .caja {
+      width: 90%;
+      max-width: 400px;
+  }
+  .botonF{
+    width: 90%;
+  }
+}

@@ -46,7 +46,7 @@ function Navbar() {
               </div>
             </ul>
 
-            <Link to='#' className=' amenu logo activonuevo moveratras'>validacion venta socios</Link>
+            <Link to='#' className=' amenu  activonuevo moveratras'>validacion venta socios</Link>
       
             <a href='/inmicio' className="amenu logo">
               <h3>Vsouls</h3>

@@ -49,8 +49,8 @@ function Navbar() {
 
             <div className='menudepublidad moveratras activonuevo'>
 
-<Link to='/admin/carrucel' class='amenu logo activonuevo moveratras'>Agregar </Link>
-       <Link to='/admin/carrucel/lista' class='amenu logo activonuevo moveratras'> Registros</Link>
+<Link to='/admin/carrucel' class='amenu activonuevo moveratras'>Agregar </Link>
+       <Link to='/admin/carrucel/lista' class='amenu activonuevo moveratras'> Registros</Link>
 
 </div>
             <a className="amenu logo">

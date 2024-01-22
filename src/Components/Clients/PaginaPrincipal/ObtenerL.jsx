@@ -23,7 +23,7 @@ export const OLink = () => {
       
         if (data[0] && data[0][0]) {
 
-            const lin = 'http://localhost:3000/login/';
+            const lin = 'https://appwebrailwayvsoulsv2-production.up.railway.app/login/'; 
             setLink(`${lin}${String(data[0][0].ID_CLIENTE)}`);
             
             setID_CLIENTE(data[0][0].ID_CLIENTE);
