@@ -81,7 +81,7 @@ export const MostrarCarrucel = () => {
                         <tr className='moveratras' key={index}>
                             <th className='moveratras' scope="row">{index + 1}</th>
                             <td className='moveratras'>
-                            <img width="150" height="100" src={`https://apivsoulsa}pi8-production.up.railway.app/dbimages/${image}`} alt="..."/>
+                            <img width="150" height="100" src={`${import.meta.env.VITE_API}/dbimages/${image}`} alt="..."/>
                             </td>
                             <td className='moveratras' >
                                 <button className='btn btn-danger margen' onClick={() => modalHandler(image)}>

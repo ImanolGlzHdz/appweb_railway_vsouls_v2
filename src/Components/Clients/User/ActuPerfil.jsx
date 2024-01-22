@@ -136,8 +136,8 @@ export const ActuPerfil = () => {
             fetch(`${import.meta.env.VITE_API}/imgCliente/get/${userId}`)
                 .then((res) => res.json())
                 .then((data) => {
-                setImageList(data[0]);
-                setCurrentImage(data[0]);
+                setImageList(data);
+                //setCurrentImage(data);
                 })
                 .catch((error) => console.error('Error:', error));
             };
@@ -145,6 +145,29 @@ export const ActuPerfil = () => {
             getCarrucel();
             setListUpdate(false);
         }, [listUpdate]);
+
+
+       /* useEffect(() => {
+            const getCarrucel = () => {
+                if (currentImage) {
+                    const imageID = currentImage.split('-');
+            
+                    if (imageID.length > 0) {
+                    const imageId = parseInt(imageID[0]);
+            
+                        fetch(`${import.meta.env.VITE_API}/imgCliente/get/${userId}`)
+                        .then(res => res.json())
+                        .then(data => {
+                            setImageList(data);
+                        })
+                        .catch(error => console.error('Error:', error));
+                        
+                    }
+                }
+            }
+            getCarrucel()
+            setListUpdate(false)
+            }, [listUpdate])*/
             
 
 
@@ -160,7 +183,7 @@ export const ActuPerfil = () => {
                         
                         <label>
                   <br />
-                  {currentImage ? (
+                  {/*currentImage ? (
                    
                     <div className='circle-image'>
                       <img
@@ -181,7 +204,18 @@ export const ActuPerfil = () => {
                         alt="Imagen por defecto"
                       />
                     </div>
-                  )}
+                  )*/}
+                  {imageList.length > 0 ? (
+                    imageList.map((image, index) => (
+                    <div key={index} className='circle-image'>
+                    <img width="100" height="100" className='tamaniouser' src={`${import.meta.env.VITE_API}/${image}`}alt="..." />
+                    </div>
+                    ))
+                    ) : ( 
+                    <div className='circle-image'>
+                        <img width="90" height="90" className='tamaniouser' src={ruta} alt="Imagen por defecto" />
+                    </div>
+                    )}
                   <br />
                 </label>
                        <br />

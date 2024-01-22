@@ -38,6 +38,8 @@ export const ActualizarUsuarioA = () => {
     const [selectedState, setSelectedState] = useState('');
     const [selectedCity, setSelectedCity] = useState('');
 
+    const [selectedRol, setSelectedRol] = useState('');
+
     const [rol, setRol] = useState([]);
 
      // ----------------------------------MOSTRAR USUARIOS ID ----------------------
@@ -149,6 +151,15 @@ export const ActualizarUsuarioA = () => {
         getRol()
     }, [])
 
+    const handleRolChange = (e) => {
+      const { name, value } = e.target;
+      setUsuariosU(usuariosU => ({
+          ...usuariosU,
+          ROL: selectedRol,
+          [name]: value,
+      }));
+    };
+
 
     const handleSelectChange = (e) => {
         const { name, value } = e.target;
@@ -156,6 +167,7 @@ export const ActualizarUsuarioA = () => {
             ...usuariosU,
             ESTADO: selectedState,
             MUNICIPIO: selectedCity,
+            ROL: selectedRol,
             [name]: value,
         }));
         
@@ -223,7 +235,7 @@ export const ActualizarUsuarioA = () => {
 
                 <div className="input-box moveratras">
                     <label for="inputState" className='labelpubli'>Rol</label>
-                    <select value={usuariosU?.ROL} id="inputState" class="form-select" name='ROL' required>
+                    <select onChange={handleRolChange} value={usuariosU?.ROL}  class="form-select" name='ROL' required>
                     <option >{usuariosU?.ROL}</option>
                     {Array.isArray(rol) && rol.map(ro => (
                     <option
