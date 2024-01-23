@@ -50,6 +50,7 @@ const Socios = () => {
         </tbody>
       </table>
       <h5>Mi codigo de invitación es: {idUsuarioGlobal}</h5>
+      <h5>Cada socio nuevo son 1,000 monedas a tu cuenta para que puedas usarlas en futuras compras!</h5>
     </div>
   );
 };
