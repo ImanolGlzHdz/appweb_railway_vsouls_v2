@@ -60,7 +60,7 @@ useEffect(() => {
       comprasPorIdVenta[idVenta].compras.push(compra);
       // Acumula los valores correctamente
       comprasPorIdVenta[idVenta].total = compra.total;
-      comprasPorIdVenta[idVenta].totalsincomisioon = compra.totalsincomision - compra.total;
+      comprasPorIdVenta[idVenta].totalsincomisioon = compra.total - compra.totalsincomision;
     });
   
     return comprasPorIdVenta;
@@ -106,7 +106,7 @@ useEffect(() => {
       comprasPorIdVenta[idVenta].compras.push(compra);
       // Acumula los valores correctamente
       comprasPorIdVenta[idVenta].total = compra.total;
-      comprasPorIdVenta[idVenta].totalsincomisioon = compra.totalsincomision - compra.total;
+      comprasPorIdVenta[idVenta].totalsincomisioon = compra.total - compra.totalsincomision;
     });
   
     return comprasPorIdVenta;
@@ -136,7 +136,7 @@ const organizarPorIdVenta = () => {
     comprasPorIdVenta[idVenta].compras.push(compra);
     // Acumula los valores correctamente
     comprasPorIdVenta[idVenta].total = compra.total;
-    comprasPorIdVenta[idVenta].totalsincomisioon = compra.totalsincomision - compra.total;
+    comprasPorIdVenta[idVenta].totalsincomisioon = compra.total - compra.totalsincomision;
   });
 
   return comprasPorIdVenta;
