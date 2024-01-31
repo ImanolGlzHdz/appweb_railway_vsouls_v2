@@ -13,7 +13,7 @@ export const Perfil = () => {
                 const userId = sessionStorage.getItem('userId');
                 
 
-                const response = await fetch(`${import.meta.env.VITE_API}/cliente/${userId}`);
+                const response = await fetch(`http://localhost:5000/cliente/${userId}`);
                 const data = await response.json();
                 
                 setPerfilM(data[0][0]);
@@ -48,7 +48,7 @@ export const Perfil = () => {
         
                    
             
-                    fetch(`${import.meta.env.VITE_API}/imgCliente/get/${userId}`)
+                    fetch(`http://localhost:5000/imgCliente/get/${userId}`)
                     .then(res => res.json())
                     .then(data => {
                         setImageList(data);
@@ -81,7 +81,7 @@ export const Perfil = () => {
                             {imageList.length > 0 ? (
                                 imageList.map((image, index) => (
                                 <div key={index} className='circle-image'>
-                                <img width="100" height="100" className='tamaniouser' src={`${import.meta.env.VITE_API}/${image}`}alt="..." />
+                                <img width="100" height="100" className='tamaniouser' src={`http://localhost:5000/${image}`}alt="..." />
                                 </div>
                                 ))
                                 ) : ( 
@@ -100,12 +100,7 @@ export const Perfil = () => {
             </div>
             <br />
         
-            <div class="col-md-6">
-                <b>
-                    <label for="inputEmail4" class="form-label">RFC</label>
-                </b>
-                <input value={perfilM?.RFC|| ''} name="RFC" type="text" class="form-control" id="inputEmail4" disabled></input>
-            </div>
+          
             <div class="col-md-6">
                 <b>
                     <label for="inputPassword4" class="form-label"></label>Nombre

@@ -15,15 +15,15 @@ export const ActualizarUsuarioA = () => {
         CORREO: '',
         PASSWORD: '',
         ROL: '',
-        RFC: '',
+        RFC: ' ',
         NOMBRE: '',
         APE1: '',
         APE2: '',
         TELEFONO: '',
         ID_DIRECCION: '',
         CP: '',
-        ESTADO: '',
-        MUNICIPIO: '',
+        ESTADO: 'Selecciona...',
+        MUNICIPIO: 'Selecciona...',
         COLONIA: '',
         CALLE: '',
         NO_EXTERIOR: '',
@@ -42,6 +42,8 @@ export const ActualizarUsuarioA = () => {
 
     const [rol, setRol] = useState([]);
 
+    const [esVisible] = useState(false);
+
      // ----------------------------------MOSTRAR USUARIOS ID ----------------------
 
      useEffect(() => {
@@ -53,7 +55,7 @@ export const ActualizarUsuarioA = () => {
             };
     
             try {
-                const response = await fetch(`${import.meta.env.VITE_API}/mostrarRegistro`, requestInit);
+                const response = await fetch('http://localhost:5000/mostrarRegistro', requestInit);
     
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
@@ -140,7 +142,7 @@ export const ActualizarUsuarioA = () => {
        // ---------------------------------COMBOS DE ROL -------------------------------
        useEffect(() => {
         const getRol = () => {
-          fetch(`${import.meta.env.VITE_API}/rol`)
+          fetch('http://localhost:5000/rol')
           .then(res => res.json())
           .then(data => {
               setRol(data[0]);
@@ -188,9 +190,9 @@ export const ActualizarUsuarioA = () => {
    // ----------------------------------- ACTUALIZAR USUARIO ------------------------------
 
    const handleUpdate= () => {
-     if (usuariosU.CORREO === '' || usuariosU.PASSWORD === '' || usuariosU.ROL ==='' || usuariosU.RFC === '' || usuariosU.NOMBRE === '' || 
-     usuariosU.APE1 === '' || usuariosU.APE2 === '' || usuariosU.TELEFONO === '' || usuariosU.CP === '' || usuariosU.ESTADO === '' ||
-     usuariosU.MUNICIPIO === '' || usuariosU.COLONIA === '' || usuariosU.CALLE === '' || usuariosU.NO_EXTERIOR === '' || 
+     if (usuariosU.CORREO === '' || usuariosU.PASSWORD === '' || usuariosU.ROL ==='' || usuariosU.NOMBRE === '' || 
+     usuariosU.APE1 === '' || usuariosU.APE2 === '' || usuariosU.TELEFONO === '' || usuariosU.CP === '' || usuariosU.ESTADO === 'Selecciona...' ||
+     usuariosU.MUNICIPIO === 'Selecciona...'|| usuariosU.COLONIA === '' || usuariosU.CALLE === '' || usuariosU.NO_EXTERIOR === '' || 
      usuariosU.NO_INTERIOR === '' || usuariosU.CALLESUPERIOR === '' || usuariosU.CALLEINFERIOR === '' || usuariosU.REFERENCIA === '' ) {
          alert('Todos los campos son obligatorios')
          return
@@ -202,7 +204,7 @@ export const ActualizarUsuarioA = () => {
          body: JSON.stringify(usuariosU)
      }
 
-     fetch(`${import.meta.env.VITE_API}/registroAdmin`, requestInit)
+     fetch('http://localhost:5000/registroAdmin ', requestInit)
      .then(res => res.text())
      .then(res => {
          setUsuariosU(res);
@@ -228,7 +230,7 @@ export const ActualizarUsuarioA = () => {
 
         <form class="form" onSubmit={handleUpdate}>
             
-              <div className="input-box moveratras" >
+              <div className="input-box moveratras" style={{ display: esVisible ? 'block' : 'none' }}>
                 <label for="inputPassword4" className='labelpubli'>ID</label>
                 <input value={usuariosU?.ID_USUARIO || ''} name="ID_USUARIO" readOnly type="text" className='sizefont inputpubli moveratras' id="inputPassword4" required></input>
                 </div>
@@ -245,10 +247,7 @@ export const ActualizarUsuarioA = () => {
                 ))}
                     </select>
                 
-                
-                    <label for="inputEmail4" className='labelpubli'>RFC</label>
-                    <input value={usuariosU?.RFC || ''} name="RFC" onChange={handleChange} type="text" className='sizefont inputpubli moveratras' id="inputEmail4" required></input>
-                </div>
+                    </div>
             <div className="input-box moveratras">
                 <label for="inputPassword4" className='labelpubli'></label>Nombre
                 <input value={usuariosU?.NOMBRE || ''} name="NOMBRE" onChange={handleChange} type="text" className='sizefont inputpubli moveratras' id="inputPassword4" required></input>
@@ -264,7 +263,7 @@ export const ActualizarUsuarioA = () => {
                 <label for="inputCity" className='labelpubli'>Telefono</label>
                 <input value={usuariosU?.TELEFONO || ''} name="TELEFONO" onChange={handleChange} type="tel" className='sizefont inputpubli moveratras' id="inputCity" required></input>
             </div>
-            <div className="input-box moveratras">
+            <div className="input-box moveratras" style={{ display: esVisible ? 'block' : 'none' }}>
             <label for="inputPassword4" className='labelpubli'>ID Dirección</label>
                 <input value={usuariosU?.ID_DIRECCION || ''} name="ID_DIRECCION" readOnly type="text" className='sizefont inputpubli moveratras' id="inputPassword4" required></input>
             </div>
@@ -313,11 +312,11 @@ export const ActualizarUsuarioA = () => {
                 <input value={usuariosU?.NO_INTERIOR || ''} name="NO_INTERIOR" onChange={handleChange} type="text" className='sizefont inputpubli moveratras' id="inputCity" required></input>
             </div>
             <div className="input-box moveratras">
-                <label for="inputCity" className='labelpubli'>Calle Superior</label>
+                <label for="inputCity" className='labelpubli'>Entre Calle</label>
                 <input value={usuariosU?.CALLESUPERIOR || ''} name="CALLESUPERIOR" onChange={handleChange} type="text" className='sizefont inputpubli moveratras' id="inputCity" required></input>
             </div>
             <div className="input-box moveratras">
-                <label for="inputCity" className='labelpubli'>Calle Inferior</label>
+                <label for="inputCity" className='labelpubli'>Y calle</label>
                 <input value={usuariosU?.CALLEINFERIOR || ''} name="CALLEINFERIOR" onChange={handleChange} type="text" className='sizefont inputpubli moveratras' id="inputCity" required></input>
             </div>
             <div className="input-box moveratras">

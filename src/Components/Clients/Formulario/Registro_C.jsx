@@ -17,7 +17,7 @@ export const Registro_C = () => {
 
     const [registroD, setRegistroD] = useState({
         ID_USUARIO: '',
-        RFC: '',
+        RFC: ' ',
         NOMBRE: '',
         APE1: '',
         APE2: '',
@@ -136,9 +136,10 @@ export const Registro_C = () => {
     // ----------------INSERTAR REGISTRO -----------------------------------
 
     
-    const handleSubmit = () => {
+    const handleSubmit = (event) => {
+      event.preventDefault();
 
-        if ( registroD.RFC === '' || registroD.NOMBRE === '' || registroD.APE1 === '' || registroD.APE2 === '' || 
+        if (registroD.NOMBRE === '' || registroD.APE1 === '' || registroD.APE2 === '' || 
         registroD.TELEFONO === '' || registroD.CP === '' || registroD.ESTADO === 'Selecciona...' ||registroD.MUNICIPIO === 'Selecciona...' || 
         registroD.COLONIA === '' || registroD.CALLE === '' || registroD.NO_EXTERIOR === '' || registroD.NO_INTERIOR === '' || 
         registroD.CALLESUPERIOR === '' || registroD.CALLEINFERIOR === '' || registroD.REFERENCIA === '' ) {
@@ -152,14 +153,14 @@ export const Registro_C = () => {
             body: JSON.stringify(registroD)
         }
 
-        fetch(`${import.meta.env.VITE_API}/cliente`, requestInit)
+        fetch('http://localhost:5000/cliente', requestInit)
         .then(res => res.text())
         .then(res => {
             
             alert(res);
             setRegistroD(res);
 
-            if(res == 'Registro insertado'){
+            if(res == 'Usuario insertado'){
                 navigate("/");
             }
           })
@@ -177,10 +178,7 @@ export const Registro_C = () => {
         
             <br /><br />
         <form class="row g-3" onSubmit={handleSubmit}>
-            <div class="col-md-6">
-                <label for="inputEmail4" className="form-label negritas">RFC</label>
-                <input name='RFC' onChange={handleChange} type="text" class="form-control"  required></input>
-            </div>
+            
             <div class="col-6">
                 <label for="inputPassword4" className="form-label negritas">Nombre</label>
                 <input name='NOMBRE' onChange={handleChange} type="text" class="form-control"  required></input>
@@ -242,11 +240,11 @@ export const Registro_C = () => {
                 <input name='NO_INTERIOR' onChange={handleChange} type="text" class="form-control"  required></input>
             </div>
             <div class="col-md-6">
-                <label for="inputCity" className="form-label negritas">Calle Superior</label>
+                <label for="inputCity" className="form-label negritas">Entre Calle</label>
                 <input name='CALLESUPERIOR' onChange={handleChange} type="text" class="form-control"  required></input>
             </div>
             <div class="col-md-6">
-                <label for="inputCity" className="form-label negritas">Calle Inferior</label>
+                <label for="inputCity" className="form-label negritas">Y Calle</label>
                 <input name='CALLEINFERIOR' onChange={handleChange} type="text" class="form-control"  required></input>
             </div>
             <div class="col-md-6">

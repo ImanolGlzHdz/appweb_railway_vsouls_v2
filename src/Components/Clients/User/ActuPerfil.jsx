@@ -28,7 +28,7 @@ export const ActuPerfil = () => {
             try {
                 const userId = sessionStorage.getItem('userId');
                
-                const response = await fetch(`${import.meta.env.VITE_API}/cliente/${userId}`);
+                const response = await fetch(`http://localhost:5000/cliente/${userId}`);
                 const data = await response.json();
                 
                 setPerfilU(data[0][0]);
@@ -54,7 +54,7 @@ export const ActuPerfil = () => {
 
     const handleUpdate= () => {
   
-        if (perfilU.RFC === '' || perfilU.NOMBRE === '' || perfilU.APE1 === '' || perfilU.APE2 === '' || perfilU.TELEFONO === '') {
+        if (perfilU.NOMBRE === '' || perfilU.APE1 === '' || perfilU.APE2 === '' || perfilU.TELEFONO === '') {
             alert('Todos los campos son obligatorios')
             return
         }
@@ -72,7 +72,7 @@ export const ActuPerfil = () => {
                 TELEFONO: perfilU.TELEFONO})
         }
 
-        fetch(`${import.meta.env.VITE_API}/cliente/put`, requestInit)
+        fetch('http://localhost:5000/cliente/put', requestInit)
         .then(res => res.text())
         .then(res => {
             setPerfilU(res);
@@ -90,7 +90,7 @@ export const ActuPerfil = () => {
 
         const selectedHandler1 = (e) => {
         setFile(e.target.files[0]);
-        setUpdateImage(true); // Establece la bandera de actualización de imagen a true cuando se selecciona una imagen
+        setUpdateImage(true);
         };
 
         const sendImage = () => {
@@ -104,7 +104,7 @@ export const ActuPerfil = () => {
 
         const userId = sessionStorage.getItem('userId');
         
-        fetch(`${import.meta.env.VITE_API}/imgCliente/upload/${userId}`, {
+        fetch(`http://localhost:5000/imgCliente/upload/${userId}`, {
         method: 'POST',
         body: formData,
         })
@@ -133,11 +133,10 @@ export const ActuPerfil = () => {
 
         useEffect(() => {
             const getCarrucel = () => {
-            fetch(`${import.meta.env.VITE_API}/imgCliente/get/${userId}`)
+            fetch(`http://localhost:5000/imgCliente/get/${userId}`)
                 .then((res) => res.json())
                 .then((data) => {
                 setImageList(data);
-                //setCurrentImage(data);
                 })
                 .catch((error) => console.error('Error:', error));
             };
@@ -146,28 +145,6 @@ export const ActuPerfil = () => {
             setListUpdate(false);
         }, [listUpdate]);
 
-
-       /* useEffect(() => {
-            const getCarrucel = () => {
-                if (currentImage) {
-                    const imageID = currentImage.split('-');
-            
-                    if (imageID.length > 0) {
-                    const imageId = parseInt(imageID[0]);
-            
-                        fetch(`${import.meta.env.VITE_API}/imgCliente/get/${userId}`)
-                        .then(res => res.json())
-                        .then(data => {
-                            setImageList(data);
-                        })
-                        .catch(error => console.error('Error:', error));
-                        
-                    }
-                }
-            }
-            getCarrucel()
-            setListUpdate(false)
-            }, [listUpdate])*/
             
 
 
@@ -183,32 +160,11 @@ export const ActuPerfil = () => {
                         
                         <label>
                   <br />
-                  {/*currentImage ? (
-                   
-                    <div className='circle-image'>
-                      <img
-                        width="100"
-                        height="100"
-                        className='tamaniouser'
-                        src={`${import.meta.env.VITE_API}/${currentImage}`}
-                        alt="..."
-                      />
-                    </div>
-                  ) : (
-                    <div className='circle-image'>
-                      <img
-                        width="90"
-                        height="90"
-                        className='tamaniouser'
-                        src={ruta}
-                        alt="Imagen por defecto"
-                      />
-                    </div>
-                  )*/}
+              
                   {imageList.length > 0 ? (
                     imageList.map((image, index) => (
                     <div key={index} className='circle-image'>
-                    <img width="100" height="100" className='tamaniouser' src={`${import.meta.env.VITE_API}/${image}`}alt="..." />
+                    <img width="100" height="100" className='tamaniouser' src={`http://localhost:5000/${image}`}alt="..." />
                     </div>
                     ))
                     ) : ( 
@@ -244,10 +200,7 @@ export const ActuPerfil = () => {
                 <label for="inputEmail4" className="form-label negritas">ID</label>
                 <input value={perfilU?.ID_USUARIO|| ''} name="ID_USUARIO" onChange={handleChange} type="text" class="form-control" id="inputEmail4" required></input>
             </div>
-            <div class="col-md-6">
-                <label for="inputEmail4" className="form-label negritas">RFC</label>
-                <input value={perfilU?.RFC|| ''} name="RFC" onChange={handleChange} type="text" class="form-control" id="inputEmail4" required></input>
-            </div>
+         
             <div class="col-md-6">
                 <label for="inputPassword4" className="form-label negritas">Nombre</label>
                 <input value={perfilU?.NOMBRE|| ''} name="NOMBRE" onChange={handleChange} type="text" class="form-control" id="inputPassword4" required></input>
@@ -260,7 +213,7 @@ export const ActuPerfil = () => {
                 <label for="inputAddress2" className="form-label negritas">Apellido Materno</label>
                 <input value={perfilU?.APE2|| ''} name="APE2" onChange={handleChange} type="text" class="form-control" id="inputAddress2" required></input>
             </div>
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <label for="inputCity" className="form-label negritas">Telefono</label>
                 <input value={perfilU?.TELEFONO|| ''} name="TELEFONO" onChange={handleChange} type="tel" class="form-control" id="inputCity" required></input>
             </div>

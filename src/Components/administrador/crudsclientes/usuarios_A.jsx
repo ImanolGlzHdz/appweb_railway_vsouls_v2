@@ -22,7 +22,7 @@ export const Usuarios_A = () => {
         CORREO: '',
         PASSWORD: '',
         ROL: 'Selecciona...',
-        RFC: '',
+        RFC: ' ',
         NOMBRE: '',
         APE1: '',
         APE2: '',
@@ -115,7 +115,7 @@ export const Usuarios_A = () => {
        // ---------------------------------COMBOS DE ROL -------------------------------
        useEffect(() => {
         const getRol = () => {
-          fetch(`${import.meta.env.VITE_API}/rol`)
+          fetch('http://localhost:5000/rol')
           .then(res => res.json())
           .then(data => {
               setRol(data[0]);
@@ -158,7 +158,7 @@ export const Usuarios_A = () => {
 
     const handleSubmit = () => {
 
-        if (usuarios.CORREO === '' || usuarios.PASSWORD === '' || usuarios.ROL ==='Selecciona...' || usuarios.RFC === '' || usuarios.NOMBRE === '' || 
+        if (usuarios.CORREO === '' || usuarios.PASSWORD === '' || usuarios.ROL ==='Selecciona...' || usuarios.NOMBRE === '' || 
         usuarios.APE1 === '' || usuarios.APE2 === '' || usuarios.TELEFONO === '' || usuarios.CP === '' || usuarios.ESTADO === 'Selecciona...' ||
         usuarios.MUNICIPIO === 'Selecciona...' || usuarios.COLONIA === '' || usuarios.CALLE === '' || usuarios.NO_EXTERIOR === '' || 
         usuarios.NO_INTERIOR === '' || usuarios.CALLESUPERIOR === '' || usuarios.CALLEINFERIOR === '' || usuarios.REFERENCIA === '' ) {
@@ -172,7 +172,7 @@ export const Usuarios_A = () => {
             body: JSON.stringify(usuarios)
         }
 
-        fetch(`${import.meta.env.VITE_API}/registroAdmin`, requestInit)
+        fetch('http://localhost:5000/registroAdmin', requestInit)
         .then(res => res.text())
         .then(res => {
             alert('Usuario Insertado');
@@ -232,10 +232,7 @@ export const Usuarios_A = () => {
                 ))}
                     </select>
                 
-                
-                    <label for="inputEmail4" className='labelpubli'>RFC</label>
-                    <input name="RFC" onChange={handleChange} type="text" className='sizefont inputpubli moveratras' id="inputEmail4" required></input>
-                </div>
+                    </div>
                 <div className="input-box moveratras">
                     <label for="inputPassword4" className='labelpubli'>Nombre</label>
                     <input name="NOMBRE" onChange={handleChange} type="text" className='sizefont inputpubli moveratras' id="inputPassword4" required></input>
@@ -296,11 +293,11 @@ export const Usuarios_A = () => {
                     <input name="NO_INTERIOR" onChange={handleChange} type="text" className='sizefont inputpubli moveratras' id="inputCity" required></input>
                 </div>
                 <div className="input-box moveratras">
-                    <label for="inputCity" className='labelpubli'>Calle Superior</label>
+                    <label for="inputCity" className='labelpubli'>Entre Calle</label>
                     <input name="CALLESUPERIOR" onChange={handleChange} type="text" className='sizefont inputpubli moveratras' id="inputCity" required></input>
                 </div>
                 <div className="input-box moveratras">
-                    <label for="inputCity" className='labelpubli'>Calle Inferior</label>
+                    <label for="inputCity" className='labelpubli'>Y calle</label>
                     <input name="CALLEINFERIOR" onChange={handleChange} type="text" className='sizefont inputpubli moveratras' id="inputCity" required></input>
                 </div>
                 <div className="input-box moveratras">

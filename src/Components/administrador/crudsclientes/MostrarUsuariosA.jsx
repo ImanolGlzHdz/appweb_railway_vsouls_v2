@@ -13,7 +13,7 @@ const [usuariosUpdate, setUsuariosUpdate] = useState(false)
 // ----------------------MOSTRAR ROL --------------------------------
 useEffect(() => {
     const getRol = () => {
-      fetch(`${import.meta.env.VITE_API}/rol`)
+      fetch('http://localhost:5000/rol')
         .then((res) => res.json())
         .then((data) => {
           setRol(data[0]);
@@ -39,7 +39,7 @@ useEffect(() => {
     };
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API}/mostrarUsuarios`, requestInit);
+      const response = await fetch('http://localhost:5000/mostrarUsuarios', requestInit);
 
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -69,7 +69,7 @@ useEffect(() => {
         body: JSON.stringify({ ID_USUARIO: ID_USUARIO, ID_DIRECCION: ID_DIRECCION })
     }
 
-    fetch(`${import.meta.env.VITE_API}/registroAdmin`, requestInit)
+    fetch('http://localhost:5000/registroAdmin', requestInit)
     .then(res => res.text())
     .then(res => {
         setUsuariosUpdate(true);
@@ -108,7 +108,6 @@ useEffect(() => {
                     <th scope="col">ID</th>
                     <th scope="col">CORREO</th>
                     <th scope="col">ROL</th>
-                    <th scope="col">RFC</th>
                     <th scope="col">NOMBRE</th>
                     <th scope="col">APELLIDO</th>
                     <th scope="col">APELLIDO 2</th>
@@ -126,7 +125,6 @@ useEffect(() => {
                     <th className='moveratras' scope="row">{usuario.ID_USUARIO}</th>
                     <td className='moveratras'>{usuario.CORREO}</td>
                     <td className='moveratras' >{usuario.ROL}</td>
-                    <td className='moveratras' >{usuario.RFC}</td>
                     <td className='moveratras'>{usuario.NOMBRE}</td>
                     <td className='moveratras'>{usuario.APE1}</td>
                     <td className='moveratras'>{usuario.APE2}</td>
